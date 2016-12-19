@@ -2,7 +2,7 @@
 "use strict";
 APP.NoteModel = Backbone.Model.extend({
   // you can set any defaults you would like here
-  urlRoot: "\#note",
+  urlRoot: "#",
   defaults: {
     name: "",
     description: "",
@@ -20,7 +20,7 @@ APP.NoteModel = Backbone.Model.extend({
 
 APP.NoteCollection = Backbone.Collection.extend({
   // Reference to this collection's model.
-  url: "\#note",
+  url: "note",
   localStorage: new Backbone.LocalStorage("NoteCollection"),
   model: APP.NoteModel,
 });
