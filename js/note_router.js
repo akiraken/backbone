@@ -7,7 +7,7 @@ APP.NoteRouter = Backbone.Router.extend({
     "notes/index": "index",
     "note/:id/edit": "edit",
     "note/:id/delete": "delete",
-    "note/:id": "index"
+    "note/:id": "index",
     "/": "index"
   },
 
