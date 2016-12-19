@@ -20,18 +20,18 @@ APP.NoteNewView = Backbone.View.extend({
     event.preventDefault();
 
     // update our model with values from the form
+    this.model = new APP.NoteModel();
     this.model.set({
       name: this.$el.find('input[name=name]').val(),
-      description: this.$el.find('textarea[name=description]').val()
+      description: this.$el.find('textarea[name=description]').val(),
     });
-    
     if (this.model.isValid()) {
-      // save it
       this.collection.add(this.model);
+      // save it
       this.model.save();
       // add it to the collection
       // redirect back to the index
-      Backbone.history.navigate("notes/index", {trigger: true});
+      Backbone.history.navigate('notes/index', {trigger: true});
     }
   },
 

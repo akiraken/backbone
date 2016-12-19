@@ -6,7 +6,8 @@ APP.NoteRouter = Backbone.Router.extend({
     "note/new": "create",
     "notes/index": "index",
     "note/:id/edit": "edit",
-    "note/:id/delete": "delete"
+    "note/:id/delete": "delete",
+    "note/:id": "index"
   },
 
   $container: $('#primary-content'),
