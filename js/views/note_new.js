@@ -22,6 +22,7 @@ APP.NoteNewView = Backbone.View.extend({
     // update our model with values from the form
     this.model = new APP.NoteModel();
     this.model.set({
+      id: _.random(0, 10000),
       name: this.$el.find('input[name=name]').val(),
       description: this.$el.find('textarea[name=description]').val(),
     });
